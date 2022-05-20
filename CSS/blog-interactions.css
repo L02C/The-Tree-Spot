@@ -32,6 +32,13 @@
 }
 
 
+.blog-interaction-mobile {
+  cursor: pointer;
+  margin-top: -150px;
+  transition: 0.1s ease;
+}
+
+
 .interaction-caption {
   text-align: center;
   font-size: 15px;
