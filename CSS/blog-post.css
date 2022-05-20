@@ -1,0 +1,159 @@
+@import url(../CSS/fonts.css);
+@import url(../CSS/header.css);
+@import url(../CSS/blog-interactions.css);
+@import url(../CSS/footer.css);
+
+
+body {
+  margin: 0;
+  background-color: #daedd3;
+  color: #2e2e2e;
+  font-family: "Maven Pro", sans-serif;
+  height: 100%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "author author author"
+    "content content content"
+    "footer footer footer";
+}
+
+
+.author-details {
+  grid-area: author;
+  margin: auto;
+  height: auto;
+  width: 83%;
+  padding: 25px;
+  background-color: #f7f5f2;
+  border-radius: 20px;
+  box-shadow: 0 12px 17px rgba(129,140,151,0.1);
+}
+
+
+.author-info-container {
+  /*for name, title, photo and company */
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+
+.author-photo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border: 3px solid #c3dbda;
+  border-radius: 50%;
+}
+
+
+.author-bio {
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+
+.quote {
+  padding-left: 5px;
+  border-left: 2px solid #CCC;
+}
+
+
+.content {
+  grid-area: content;
+  width: 83%;
+  margin: 20px auto 30px;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: #f7f5f2;
+  box-shadow: 0 12px 17px rgba(129,140,151,0.1);
+}
+
+
+.tree-li-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tree-list {
+  padding: 0 0 0 50px;
+}
+
+
+.tree-image-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+
+
+.image-caption {
+  font-size: 13px;
+}
+
+
+.tree-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+
+.tree-text {
+  padding-right: 10px;
+}
+
+
+@media (min-width: 720px) {
+  .tree-li-content {
+    flex-direction: row;
+}
+
+
+@media (min-width: 1024px) {
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 300px auto 90px;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "header header header"
+        "author content interactions"
+        "footer footer footer";
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+  .author-details {
+    grid-area: author;
+    height: 300px;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+
+  .tree-image {
+    height: 150px;
+    width: 150px;
+  }
+
+
+  .tree-text {
+    width: 65%;
+  }
+
+
+  .content {
+    width: 90%;
+    margin-left: 40px;
+    margin-top: 0;
+  }
+}
